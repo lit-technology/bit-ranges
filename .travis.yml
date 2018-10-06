@@ -1,0 +1,16 @@
+language: go
+
+go:
+  - master
+
+env:
+  - GO111MODULE=on
+
+install: true
+
+script:
+    make test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
